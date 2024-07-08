@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+:root {
+  font-family: "Roboto Mono", sans-serif;
+}
+:root .dark {
+  background-color: #142030;
+  color: #f9f1de;
+}
+:root .dark #switchTheme svg {
+  fill: #f9f1de;
+}
+:root .light {
+  background-color: #f9f1de;
+  color: #142030;
+}
+:root .light #switchTheme svg {
+  fill: #142030;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+header #firstChunkHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+header div {
+  width: fit-content;
+  background: linear-gradient(-90deg, #54c594, #22577a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+header div h1 {
+  width: fit-content;
+}
+
+#switchTheme {
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: transparent;
+}
+#switchTheme:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#switchTheme:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#ulHeader {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+#ulHeader li {
+  list-style-type: none;
+  margin: 0 10px;
+}
+#ulHeader li a {
+  text-decoration: none;
+  color: #54c594;
+}
+#ulHeader li a:hover {
+  cursor: pointer;
+  color: #17b16e;
+}
+
+section a {
+  text-decoration: none;
+  color: #54c594;
+}
+section a:hover {
+  cursor: pointer;
+  color: #17b16e;
+}
+
+.projectsGrid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.projectsGrid .projectsGridCard {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.projectsGrid .projectsGridCard div {
+  margin: 0 0 0 20px;
+}
+.projectsGrid .projectsGridCard div a,
+.projectsGrid .projectsGridCard div p,
+.projectsGrid .projectsGridCard div h3 {
+  margin: 0;
+}
+.projectsGrid .projectsGridCard img {
+  width: 75px;
+  height: 75px;
+}
+.projectsGrid .projectsGridCard:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  cursor: context-menu;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+footer a {
+  text-decoration: none;
+  color: #54c594;
+}
+footer a:hover {
+  cursor: pointer;
+  color: #17b16e;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 90%;
+  }
+  h1 {
+    text-align: center;
+  }
+  .projectsGrid {
+    flex-direction: column;
+  }
+  .projectsGrid .projectsGridCard {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

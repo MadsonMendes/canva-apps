@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Canva, Canva Apps, Design, Canva Plugins" />
+    <meta
+      name="description"
+      content="Cool apps to help you design better with Canva."
+    />
+    <meta name="author" content="Madson" />
+    <meta name="theme-color" content="#22577a" />
+    <link rel="icon" type="image/png" href="/icons/favicon.png" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <title>Terms of Use | Madson's Canva Apps</title>
+  </head>
+  <body class="light">
+    <main>
+      <header>
+        <div id="firstChunkHeader">
+          <button id="switchTheme">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M120,40V32a8,8,0,0,1,16,0v8a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-8-8A8,8,0,0,0,50.34,61.66Zm0,116.68-8,8a8,8,0,0,0,11.32,11.32l8-8a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l8-8a8,8,0,0,0-11.32-11.32l-8,8A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l8,8a8,8,0,0,0,11.32-11.32ZM40,120H32a8,8,0,0,0,0,16h8a8,8,0,0,0,0-16Zm88,88a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-8A8,8,0,0,0,128,208Zm96-88h-8a8,8,0,0,0,0,16h8a8,8,0,0,0,0-16Z"
+              ></path>
+            </svg>
+          </button>
+          <div>
+            <a href="/index.html">
+              <h1>Madson's Canva Apps</h1>
+            </a>
+          </div>
+        </div>
+        <nav id="navHeader">
+          <ul id="ulHeader">
+            <li>
+              <a href="/privacy-policy.html">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/terms-of-use.html">Terms of Use</a>
+            </li>
+            <li>
+              <a>Support</a>
+            </li>
+            <li>
+              <a>Repository</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section style="height: 100vh">
+        <p>
+          By accessing or using any of our applications (“Services”), you agree
+          to be bound by these Terms of Service (“Terms”). These Terms
+          constitute a legally binding agreement between you and our apps. If
+          you do not agree to these Terms, please do not use the Service.
+        </p>
+        <p>
+          All content and materials available on all Services, including but not
+          limited to text, graphics, website name, code, images, and logos, are
+          free to use and distribute under the
+          <a href="https://choosealicense.com/licenses/gpl-3.0/"
+            >GNU General Public License</a
+          >.
+        </p>
+
+        <p>
+          By using using our services, you retain all rights to your content.
+        </p>
+        <p>
+          This terms can be modified at any time. Your continued use of all
+          Services after any modifications indicates your acceptance of the new
+          Terms.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Made with ❤️ by
+        <a href="">Madson Mendes</a>
+      </p>
+    </footer>
+  </body>
+  <script>
+    const theme = document.querySelector("#switchTheme");
+    const body = document.querySelector("body");
+
+    if (!localStorage.getItem("theme")) {
+      localStorage.setItem("theme", "light");
+    } else if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark");
+      body.classList.remove("light");
+    } else {
+      body.classList.add("light");
+      body.classList.remove("dark");
+    }
+
+    theme.addEventListener("click", () => {
+      if (localStorage.getItem("theme") === "light") {
+        localStorage.setItem("theme", "dark");
+        body.classList.remove("light");
+        body.classList.add("dark");
+      } else {
+        localStorage.setItem("theme", "light");
+        body.classList.remove("dark");
+        body.classList.add("light");
+      }
+    });
+  </script>
+</html>
